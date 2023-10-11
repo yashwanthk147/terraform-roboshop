@@ -11,6 +11,9 @@ resource "aws_instance" "ec2" {
     ami                      = data.aws_ami.ami.image_id
     instance_type            = "t3.medium"
     vpc_security_group_ids   = ["sg-05a0128acebb0e8b2"]
+    tags = {
+      Name             = var.instance[count.index]
+    }
 
   
 }
