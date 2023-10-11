@@ -54,6 +54,9 @@ output "var_cli" {
 //  }
 //}
 //
+
+#when do we use quotes in output blocks
+#wen you have combi of strings and variables in a mesage that we are trying to print
 //output "types" {
 //  value = "Variable sample5 - ${var.sample5}, First value in list - ${var.sample6[0]}, Boolean Value of Map = ${var.sample7["boolean"]}"
 //}
