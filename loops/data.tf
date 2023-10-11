@@ -21,5 +21,5 @@ variable "instance" {
   
 }
 output "ami_id" {
-    value = data.aws_ami.ec2.image_id
+    value = data.aws_ami.ami.image_id
 }
