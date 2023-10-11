@@ -14,7 +14,7 @@ variable "d2" {
   
 }
 
-resource "null_resource" "d2" {
+resource "null_resource" "jdiw" {
   count = length(var.d2)
 
 }
