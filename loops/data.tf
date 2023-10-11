@@ -1,0 +1,25 @@
+data "aws_ami" "ec2" {
+  most_recent      = true
+  name_regex       = "Centos-8-DevOps-Practice"
+  owners           = ["973714476881"]
+
+}
+
+
+resource "aws_instance" "ec2" {
+    count                    = length(var.instance)
+    ami                      = "ami-03265a0778a880afb"
+    instance_type            = "t3.medium"
+    vpc_security_group_ids   = ["sg-05a0128acebb0e8b2"]
+
+  
+}
+
+
+variable "instance" {
+  default = ["cart", "catalogue", "shipping"]
+  
+}
+output "ami_id" {
+    value = data.aws_ami.ec2.image_id
+}
