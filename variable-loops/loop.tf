@@ -10,11 +10,11 @@ resource "null_resource" "name" {
 
 
 variable "d2" {
-  default = ["apple", 5, True]
+  default = [apple, 5, True]
   
 }
 
-resource "null_resource" "name" {
+resource "null_resource" "d2" {
   count = length(var.d2)
 
 }
