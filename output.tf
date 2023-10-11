@@ -1,0 +1,4 @@
+output "sample" {
+    value = "Helloworld"
+  
+}
