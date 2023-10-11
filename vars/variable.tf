@@ -20,3 +20,6 @@ variable "cli" {
 output "var_cli" {
   value = var.cli
 }
+
+#terraform apply -var cli="HELLO SHELL SCRIPT"
+#export TF_VAR_cli="HELLO FROM SHELL ENV AVRIABLE"
