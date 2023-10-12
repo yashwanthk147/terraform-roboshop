@@ -33,7 +33,7 @@ resource "aws_instance" "instance" {
             "cd/home/centos",
             "git clone https://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@github.com/yashwanthk147/Shell-Scripting.git",
             "cd Shell-Scripting/shell-scripting/roboshop",
-            #"sudo make ${element(var.component, count.index)}"
+            "sudo make ${var.component}.sh"
 
 
          ]
