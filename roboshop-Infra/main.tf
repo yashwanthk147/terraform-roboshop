@@ -9,6 +9,7 @@ module "ec2" {
 }
 
 module "sg" {
+    for_each = var.instance
     source = "./sg"
     component = each.value["name"]
 }
