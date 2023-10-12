@@ -42,3 +42,8 @@ variable "instance" {
 
 
 
+output "ec2" {
+  value = [for k, v in aws_instance.aws_instance.instance : v.public_ip]
+
+  
+}
