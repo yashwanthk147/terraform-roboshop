@@ -10,7 +10,9 @@ module "ec2" {
 
 module "sg" {
     source = "./sg"
+    component = each.value["name"]
 }
+
 
 module "route53" {
     for_each = var.instance
