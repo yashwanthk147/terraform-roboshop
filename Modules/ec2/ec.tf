@@ -17,7 +17,7 @@ resource "aws_instance" "instance" {
     #for_each                 =  var.instance
     ami                      = data.aws_ami.ami.image_id
     instance_type            = var.instance_type
-    vpc_security_group_ids   = ["sg-05a0128acebb0e8b2"]
+    vpc_security_group_ids   = [var.sg_id]
     tags = {
       Name             = var.component
     }
@@ -38,3 +38,6 @@ resource "aws_route53_record" "record" {
 variable "component" {}
 
 variable "instance_type" {}
+
+
+variable "sg_id" {}
