@@ -43,7 +43,3 @@ variable "instance" {
   }
   
 }
-
-variable "sg_id" {
-  
-}
