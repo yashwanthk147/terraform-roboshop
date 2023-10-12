@@ -31,3 +31,7 @@ variable "instance_type" {}
 
 
 variable "sg_id" {}
+
+output "private_ip" {
+    value = aws_instance.instance.private_ip
+}
