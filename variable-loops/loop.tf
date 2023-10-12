@@ -10,7 +10,7 @@ resource "null_resource" "name" {
 
 
 variable "d2" {
-  default = [apple, banana]
+  default = ["apple", "banana"]
   
 }
 
