@@ -29,11 +29,11 @@ resource "aws_instance" "instance" {
 variable "instance" {
   default = {
     cart = {
-      name = cart
+      name = "cart"
       type = "t2.medium"
     }   
     user = {
-      name = user
+      name = "user"
       type = "t2.small"
     }
   }
