@@ -21,25 +21,26 @@ resource "aws_instance" "instance" {
     tags = {
       Name             = "${var.component}-${var.env}"
     }
+  
+}
 
+resource "null_resource" "provisioner" {
     provisioner "remote-exec" {
-        connection {
-          host = self.public_ip
-          user = "root"
-          password = "DevOps321"
-        }
+       connection {
+         host = self.public_ip
+         user = "root"
+         password = "DevOps321"
+       }
 
-        inline = [ 
-            "cd/home/centos",
-            "git clone https://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@github.com/yashwanthk147/Shell-Scripting.git",
-            "cd Shell-Scripting/shell-scripting/roboshop",
-            "sudo make ${var.component}.sh"
-
-
-         ]
+       inline = [ 
+         "cd/home/centos",
+         "git clone https://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@github.com/yashwanthk147/Shell-Scripting.git",
+         "cd Shell-Scripting/shell-scripting/roboshop",
+         "sudo make ${var.component}.sh"
+       ]
       
     }
-
+    
   
 }
 
