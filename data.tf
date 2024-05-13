@@ -3,6 +3,7 @@ data "aws_ami" "ec2" {
   name_regex       = "Centos-8-DevOps-Practice"
   owners           = ["973714476881"]
 
+
 }
 
 output "ami_id" {
